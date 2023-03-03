@@ -41,3 +41,4 @@ vscode:
     - svelte.svelte-vscode
     - ms-playwright.playwright
     - esbenp.prettier-vscode
+    - sebsojeda.vscode-svx
