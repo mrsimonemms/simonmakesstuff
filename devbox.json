@@ -1,10 +1,8 @@
 {
-  "packages": [
-    "pre-commit",
-    "ruby"
-  ],
+  "packages": ["nodejs-18_x", "pre-commit", "ruby"],
   "shell": {
     "init_hook": [
+      "npm ci",
       "pre-commit install --install-hooks -t pre-commit -t commit-msg"
     ]
   },
