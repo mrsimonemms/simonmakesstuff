@@ -1,15 +1,9 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
   - name: Setup
     before: |
-      nvm install --lts
-      nvm use --lts
-      nvm alias default $(node -v | sed 's/v//')
-      echo "nvm use default" > ~/.bashrc.d/51-nvm-fix
-
-      curl -sfL gpm.simonemms.com | bash
-
-      gpm install pre-commit
-
       npm ci
 
       gp sync-done setup

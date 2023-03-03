@@ -26,9 +26,16 @@ jobs:
 
       - run: npm ci
 
+      - run: npx playwright install --with-deps
+
       - uses: wagoid/commitlint-github-action@v5
 
       - run: npm run lint
+
+      - name: Tests
+        run: |
+          npm test
+          npm run test:unit
 
       - run: npm run build
 
