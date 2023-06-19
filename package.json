@@ -6,12 +6,17 @@
     "build": "vite build",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "copy:fonts": "cp -rf node_modules/@mdi/font/fonts ./static",
     "dev": "vite dev",
     "format": "prettier --plugin-search-dir . --write .",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "prebuild": "npm run copy:fonts",
+    "predev": "npm run copy:fonts",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@creativebulma/bulma-tooltip": "^1.2.0",
+    "@mdi/font": "^7.2.96",
     "@sveltejs/adapter-static": "^2.0.2",
     "@sveltejs/kit": "^1.5.0",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
