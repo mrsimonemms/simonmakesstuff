@@ -25,6 +25,8 @@
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.26.0",
+    "front-matter": "^4.0.2",
+    "glob": "^10.2.7",
     "prettier": "^2.8.0",
     "prettier-plugin-svelte": "^2.8.1",
     "sass": "^1.63.4",
