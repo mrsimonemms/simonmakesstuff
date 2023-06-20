@@ -1,4 +1,11 @@
 tasks:
+  - name: Install
+    command: |
+      npm ci
+
+      gp sync-done install
+
+      exit 0
   - name: Setup
     before: |
       curl -sfL gpm.simonemms.com | bash
@@ -16,6 +23,9 @@ tasks:
       exit 0
   - command: |
       gp sync-await setup
+      gp sync-await install
+
+      npm run dev -- --host=0.0.0.0
 
 vscode:
   extensions:
