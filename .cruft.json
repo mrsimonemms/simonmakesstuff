@@ -1,0 +1,18 @@
+{
+  "template": "https://github.com/mrsimonemms/new",
+  "commit": "7716cfa6abc8b31424ad8f8f3e77a84296bb2cb8",
+  "checkout": "main",
+  "context": {
+    "cookiecutter": {
+      "project_name": "simonmakesstuff",
+      "description": "Stuff what I have made",
+      "author": "Simon Emms <simon@simonemms.com>",
+      "type": "svelte",
+      "_template": "https://github.com/mrsimonemms/new"
+    }
+  },
+  "directory": "js",
+  "skip": [
+    ".git"
+  ]
+}
