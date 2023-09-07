@@ -16,9 +16,6 @@
 
 import { listPosts } from '../../content/projects';
 
-export const load = async () => {
-	console.log(listPosts());
-	return {
-		posts: listPosts(),
-	};
-};
+export const load = () => ({
+	posts: listPosts(),
+});
