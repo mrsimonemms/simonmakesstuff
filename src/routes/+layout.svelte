@@ -6,8 +6,8 @@
 
 <Nav />
 
-<div class="site-content">
-	<div class="container my-5">
+<div class="section site-content">
+	<div class="container">
 		<slot />
 	</div>
 </div>
