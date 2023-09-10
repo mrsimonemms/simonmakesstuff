@@ -23,18 +23,17 @@
 	});
 </script>
 
+<div class="section p-0">
+	<div class="container">
+		<a class="logo py-2 is-flex is-justify-content-center" href="{base}/">
+			<img src="{base}/images/logo.png" alt="Simon Makes Stuff" />
+		</a>
+	</div>
+</div>
+
 <nav class="navbar is-dark" aria-label="main navigation">
 	<div class="container">
 		<div class="navbar-brand">
-			<a class="navbar-item" href="{base}/">
-				<img
-					src="https://bulma.io/images/bulma-logo-white.png"
-					width="112"
-					height="28"
-					alt="Logo"
-				/>
-			</a>
-
 			<span
 				class="navbar-burger"
 				aria-hidden="true"
@@ -48,7 +47,7 @@
 		</div>
 
 		<div id="navbarExpansion" class="navbar-menu" class:is-active={displayNav}>
-			<div class="navbar-start">
+			<div class="navbar-start is-flex-grow-1 is-justify-content-center">
 				{#each menuBar as item}
 					<a
 						href={item.link}
@@ -61,8 +60,16 @@
 					</a>
 				{/each}
 			</div>
-
-			<div class="navbar-end"></div>
 		</div>
 	</div>
 </nav>
+
+<style lang="scss">
+	.logo {
+		img {
+			max: {
+				height: 6rem;
+			}
+		}
+	}
+</style>
