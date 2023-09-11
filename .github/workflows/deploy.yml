@@ -67,6 +67,9 @@ jobs:
         run: npm run lint
 
       - name: Build
+        env:
+          PUBLIC_DOMAIN_NAME: https://www.simonmakesstuff.com
+          PUBLIC_TWITTER_USER: "@TheShroppieBeek"
         run: |
           npm run build
           touch build/.nojekyll
