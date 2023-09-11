@@ -7,6 +7,7 @@
 	import DateFormat from '$lib/components/date-format.svelte';
 	import { DateTime } from 'luxon';
 	import { goto } from '$app/navigation';
+	import Opengraph from '$lib/components/opengraph.svelte';
 
 	export let data: PageData;
 
@@ -36,6 +37,8 @@
 		filter = tag;
 	}
 </script>
+
+<Opengraph title="My Projects" />
 
 <h1 class="is-size-1">My Projects</h1>
 
