@@ -1,18 +1,15 @@
 <script lang="ts">
-	export let href: string;
 	export let img: string;
 </script>
 
-<a {href}>
-	<div class="card">
-		<div class="card-image">
-			<figure class="image is-2by1" style="background-image: url('{img}')" />
-		</div>
-		<div class="card-content">
-			<slot />
-		</div>
+<div class="card">
+	<div class="card-image">
+		<figure class="image is-2by1" style="background-image: url('{img}')" />
 	</div>
-</a>
+	<div class="card-content">
+		<slot />
+	</div>
+</div>
 
 <style lang="scss">
 	.image {

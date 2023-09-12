@@ -49,37 +49,36 @@
 <div class="columns is-multiline">
 	{#each posts as post, key}
 		<div class="column" class:is-half={key < 2} class:is-one-quarter={key >= 2}>
-			<Card
-				href="{base}/projects/{post.slug}"
-				img="{base}/images/content/projects/{post.slug}/{post.image}"
-			>
-				<h2 class="title">{post.title}</h2>
-				{#if post.subtitle}
-					<h3 class="subtitle">{post.subtitle}</h3>
-				{/if}
+			<a href="{base}/projects/{post.slug}">
+				<Card img="{base}/images/content/projects/{post.slug}/{post.image}">
+					<h2 class="title">{post.title}</h2>
+					{#if post.subtitle}
+						<h3 class="subtitle">{post.subtitle}</h3>
+					{/if}
 
-				<div class="content">
-					{post.excerpt}
-				</div>
+					<div class="content">
+						{post.excerpt}
+					</div>
 
-				<div class="tags are-medium">
-					{#each post.tags ?? [] as tag}
-						<a
-							href="{base}/projects{tag !== filter ? `?tag=${tag}` : ''}"
-							class="tag"
-							data-sveltekit-noscroll
-							on:click|preventDefault={selectTag(tag)}
-						>
-							{tag}
-						</a>
-					{/each}
-				</div>
+					<div class="tags are-medium">
+						{#each post.tags ?? [] as tag}
+							<a
+								href="{base}/projects{tag !== filter ? `?tag=${tag}` : ''}"
+								class="tag"
+								data-sveltekit-noscroll
+								on:click|preventDefault={selectTag(tag)}
+							>
+								{tag}
+							</a>
+						{/each}
+					</div>
 
-				<p class="is-size-7 has-text-grey has-text-right">
-					Published:
-					<DateFormat date={post.date} format={DateTime.DATE_FULL} />
-				</p>
-			</Card>
+					<p class="is-size-7 has-text-grey has-text-right">
+						Published:
+						<DateFormat date={post.date} format={DateTime.DATE_FULL} />
+					</p>
+				</Card>
+			</a>
 		</div>
 	{/each}
 </div>
