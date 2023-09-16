@@ -19,7 +19,7 @@
 />
 
 <div class="columns">
-	<div class="column is-two-thirds">
+	<div class="column">
 		<Card
 			img="{base}/images/content/projects/{data.post.slug}/{data.post.image}"
 		>
@@ -36,40 +36,5 @@
 				<svelte:component this={data.Component} />
 			</div>
 		</Card>
-	</div>
-
-	<div class="column">
-		<div class="card mb-5">
-			<div class="card-content">
-				<h3 class="title is-5">About The Author</h3>
-
-				<div class="is-flex is-justify-content-center">
-					<figure class="image">
-						<img alt="Simon Emms" src="{base}/images/face-and-hat.jpg" />
-					</figure>
-				</div>
-
-				<div class="has-text-weight-light content">Lorem ipsum</div>
-			</div>
-		</div>
-
-		{#if (data.post.tags ?? []).length > 0}
-			<div class="card">
-				<div class="card-content">
-					<h3 class="title is-5">Tags</h3>
-					<div class="tags are-medium">
-						{#each data.post.tags ?? [] as tag}
-							<a
-								class="tag"
-								href="{base}/projects?tag=${tag}"
-								data-sveltekit-noscroll
-							>
-								{tag}
-							</a>
-						{/each}
-					</div>
-				</div>
-			</div>
-		{/if}
 	</div>
 </div>
