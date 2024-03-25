@@ -23,6 +23,8 @@ declare global {
 		// interface PageData {}
 		// interface Platform {}
 	}
+
+	declare const __DESCRIPTION__: string;
 }
 
 export {};

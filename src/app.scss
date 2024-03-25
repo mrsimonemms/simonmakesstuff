@@ -14,5 +14,9 @@
 
 /* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */ /* Import only what you need from Bulma */
 @use 'bulma/sass' with (
-	$body-overflow-y: auto
+	$body-overflow-y: auto,
+	$navbar-height: 4rem,
+	$navbar-item-img-max-height: 3rem
 );
+
+@use '@mdi/font/scss/materialdesignicons' with($mdi-font-path: '/fonts');
