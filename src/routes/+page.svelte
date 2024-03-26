@@ -1,3 +1,9 @@
+<script lang="ts">
+	import Opengraph from '$lib/components/opengraph.svelte';
+</script>
+
+<Opengraph title="Stuff What I Have Made" />
+
 <section class="hero is-large">
 	<div class="container">
 		<div class="hero-body">

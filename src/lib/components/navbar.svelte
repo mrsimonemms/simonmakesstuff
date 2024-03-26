@@ -64,9 +64,9 @@
 				{#each menuLinks as item}
 					<a
 						class="navbar-item"
-						class:is-active={item.exactMatch
-							? $page.route.id === item.url
-							: $page.route.id?.startsWith(item.url)}
+						class:is-active={item.exactMatch !== false
+							? $page.url.pathname === item.url
+							: $page.url.pathname?.startsWith(item.url)}
 						href={item.url}
 						target={item.external ? '_blank' : undefined}
 					>
