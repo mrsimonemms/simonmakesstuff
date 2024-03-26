@@ -20,3 +20,17 @@
 );
 
 @use '@mdi/font/scss/materialdesignicons' with($mdi-font-path: '/fonts');
+
+.content {
+	blockquote {
+		@extend .message;
+		@extend .message-body;
+		@extend .is-primary;
+	}
+
+	table {
+		@extend .table;
+		@extend .is-fullwidth;
+		@extend .is-hoverable;
+	}
+}

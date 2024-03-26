@@ -10,6 +10,11 @@
 			name: 'Home',
 			url: '/',
 		},
+		{
+			name: 'Projects',
+			url: '/projects',
+			exactMatch: false,
+		},
 	];
 
 	afterNavigate(() => {

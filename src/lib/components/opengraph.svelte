@@ -15,19 +15,19 @@
 	export let image = '/images/logo.png';
 	export let imageTwitter = '/images/logo.png';
 	export let norobots = false;
-	export let keywords = [
+	export let keywords: string[] = [
 		'beekeeping',
 		'crafts',
 		'diy',
 		'projects',
 		'woodworking',
-	].join(', ');
+	];
 	export let useTwitterSummaryImage = true;
 </script>
 
 <svelte:head>
 	<title>{siteTitle} | {title}</title>
-	<meta name="keywords" content={keywords} />
+	<meta name="keywords" content={keywords.join(', ')} />
 	<meta name="description" content={description} />
 
 	{#if norobots}
