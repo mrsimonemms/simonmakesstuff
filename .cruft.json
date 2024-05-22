@@ -1,0 +1,18 @@
+{
+  "template": "https://github.com/mrsimonemms/new",
+  "commit": "fdb570bf5a2b5fb699b3cd3d595d6a3b734a7af3",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "sveltekit-content",
+      "description": "Content driven website using SvelteKit",
+      "author": "Simon Emms <simon@simonemms.com>",
+      "type": "svelte",
+      "_template": "https://github.com/mrsimonemms/new"
+    }
+  },
+  "directory": "js",
+  "skip": [
+    ".git"
+  ]
+}
