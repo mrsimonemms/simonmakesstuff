@@ -1,0 +1,16 @@
+---
+import BaseLayout from './Base.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  img: string;
+}
+
+const { title, description, img } = Astro.props;
+---
+
+<BaseLayout {title} {description} {img}>
+  <h1>This is the post layout - todo</h1>
+  <slot />
+</BaseLayout>
